@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Details - RealEstate Pro</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">🏠 RealEstate Pro</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="properties.html" class="nav-link">Properties</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Back Button -->
+    <div class="container" style="margin-top: 20px;">
+        <a href="properties.html" class="back-link">← Back to Properties</a>
+    </div>
+
+    <!-- Property Details Section -->
+    <section class="property-details-section">
+        <div class="container">
+            <!-- Image Gallery -->
+            <div class="gallery-container" id="galleryContainer">
+                <div class="main-image">
+                    <img id="mainImage" src="" alt="Property Image">
+                </div>
+                <div class="thumbnail-gallery" id="thumbnailGallery">
+                    <!-- Thumbnails will be loaded by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Property Info -->
+            <div class="property-info-wrapper">
+                <div class="property-header">
+                    <h1 id="propertyTitle"></h1>
+                    <p id="propertyLocation" class="property-location"></p>
+                </div>
+
+                <!-- Price and Basic Info -->
+                <div class="property-price-section">
+                    <div class="price-tag">
+                        <span class="label">Price</span>
+                        <h2 id="propertyPrice"></h2>
+                    </div>
+                    <div class="property-quick-stats">
+                        <div class="stat">
+                            <span class="stat-icon">🛏️</span>
+                            <div>
+                                <div class="stat-label">Bedrooms</div>
+                                <div class="stat-value" id="bedrooms"></div>
+                            </div>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-icon">🚿</span>
+                            <div>
+                                <div class="stat-label">Bathrooms</div>
+                                <div class="stat-value" id="bathrooms"></div>
+                            </div>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-icon">📐</span>
+                            <div>
+                                <div class="stat-label">Square Feet</div>
+                                <div class="stat-value" id="sqft"></div>
+                            </div>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-icon">📅</span>
+                            <div>
+                                <div class="stat-label">Year Built</div>
+                                <div class="stat-value" id="yearBuilt"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Description -->
+                <div class="property-description">
+                    <h3>Description</h3>
+                    <p id="propertyDescription"></p>
+                </div>
+
+                <!-- Amenities -->
+                <div class="property-amenities">
+                    <h3>Amenities</h3>
+                    <div class="amenities-grid" id="amenitiesList">
+                        <!-- Amenities will be loaded by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="property-actions">
+                    <a href="contact.html" class="btn-primary">Schedule Viewing</a>
+                    <a href="contact.html" class="btn-secondary">Make an Inquiry</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Similar Properties Section -->
+    <section class="similar-properties">
+        <div class="container">
+            <h2>Similar Properties</h2>
+            <div class="properties-grid" id="similarProperties">
+                <!-- Similar properties will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Us</h4>
+                    <p>RealEstate Pro is your trusted partner in finding the perfect property. With years of experience, we connect buyers with their dream homes.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="properties.html">Properties</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Email: info@realestatepro.com</p>
+                    <p>Phone: 1-800-PROPERTY</p>
+                    <p>Address: 123 Real Estate Ave, New York, NY</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 RealEstate Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="js/script.js"></script>
+</body>
+</html>

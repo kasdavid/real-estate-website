@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - RealEstate Pro</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        // Protect this page - redirect if not logged in
+        if (!localStorage.getItem('realestate_user') && !sessionStorage.getItem('realestate_user')) {
+            window.location.href = 'login.html?redirect=dashboard.html';
+        }
+    </script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">🏠 RealEstate Pro</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Browse</a>
+                    <div class="dropdown-menu">
+                        <a href="buy.html">Buy Properties</a>
+                        <a href="rent.html">Rent Properties</a>
+                        <a href="search.html">Advanced Search</a>
+                    </div>
+                </li>
+                <li class="nav-item" id="userMenuDash">
+                    <a href="#" class="nav-link">Dashboard</a>
+                    <div class="dropdown-menu">
+                        <a href="dashboard.html">My Dashboard</a>
+                        <a href="favorites.html">My Favorites</a>
+                        <a href="add-property.html">Add Property</a>
+                        <a href="#" onclick="logout()">Logout</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard Container -->
+    <section class="dashboard-section">
+        <div class="container">
+            <div class="dashboard-wrapper">
+                <!-- Sidebar -->
+                <aside class="dashboard-sidebar">
+                    <div class="user-profile">
+                        <div class="user-avatar">👤</div>
+                        <h3 id="userName">John Doe</h3>
+                        <p id="userEmail">john@example.com</p>
+                    </div>
+
+                    <nav class="dashboard-nav">
+                        <a href="dashboard.html" class="nav-item active">
+                            <span class="icon">📊</span> Overview
+                        </a>
+                        <a href="#" class="nav-item">
+                            <span class="icon">🏠</span> My Properties
+                        </a>
+                        <a href="favorites.html" class="nav-item">
+                            <span class="icon">❤️</span> Favorites
+                        </a>
+                        <a href="#" class="nav-item">
+                            <span class="icon">📧</span> Messages
+                        </a>
+                        <a href="add-property.html" class="nav-item">
+                            <span class="icon">➕</span> Add Property
+                        </a>
+                        <a href="#" class="nav-item">
+                            <span class="icon">⚙️</span> Settings
+                        </a>
+                    </nav>
+                </aside>
+
+                <!-- Main Content -->
+                <main class="dashboard-content">
+                    <h1>Welcome, <span id="userFirstName">John</span>!</h1>
+
+                    <!-- Stats Cards -->
+                    <div class="stats-cards">
+                        <div class="stat-card">
+                            <div class="stat-icon">🏠</div>
+                            <div class="stat-info">
+                                <div class="stat-value" id="propertyCount">0</div>
+                                <div class="stat-label">My Properties</div>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">❤️</div>
+                            <div class="stat-info">
+                                <div class="stat-value" id="favoriteCount">0</div>
+                                <div class="stat-label">Favorites</div>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">👁️</div>
+                            <div class="stat-info">
+                                <div class="stat-value" id="viewsCount">0</div>
+                                <div class="stat-label">Profile Views</div>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">📧</div>
+                            <div class="stat-info">
+                                <div class="stat-value" id="messagesCount">0</div>
+                                <div class="stat-label">Messages</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div class="quick-actions">
+                        <h2>Quick Actions</h2>
+                        <div class="actions-grid">
+                            <a href="add-property.html" class="action-btn">
+                                <span class="action-icon">➕</span>
+                                <span>Add New Property</span>
+                            </a>
+                            <a href="buy.html" class="action-btn">
+                                <span class="action-icon">🔍</span>
+                                <span>Browse Properties</span>
+                            </a>
+                            <a href="favorites.html" class="action-btn">
+                                <span class="action-icon">❤️</span>
+                                <span>View Favorites</span>
+                            </a>
+                            <a href="#" class="action-btn">
+                                <span class="action-icon">📋</span>
+                                <span>View Listings</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Recent Activity -->
+                    <div class="recent-activity">
+                        <h2>Recent Activity</h2>
+                        <div id="activityFeed" class="activity-list">
+                            <p style="color: #999;">No recent activity</p>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Us</h4>
+                    <p>RealEstate Pro is your trusted partner in finding the perfect property.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="buy.html">Buy</a></li>
+                        <li><a href="rent.html">Rent</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Email: info@realestatepro.com</p>
+                    <p>Phone: 1-800-PROPERTY</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 RealEstate Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+<script type="module" src="js/firebase.js"></script>
+    <script type="module" src="js/auth.js"></script>
+    <script type="module" src="js/dashboard.js"></script>
+</body>
+</html>

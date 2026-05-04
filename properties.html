@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properties - RealEstate Pro</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">🏠 RealEstate Pro</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="buy.html" class="nav-link">Buy</a>
+                </li>
+                <li class="nav-item">
+                    <a href="rent.html" class="nav-link">Rent</a>
+                </li>
+                <li class="nav-item">
+                    <a href="agent.html" class="nav-link">Agents</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link">Dashboard</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>All Properties</h1>
+            <p>Browse our complete collection of available properties</p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="filterType">Property Type</label>
+                    <select id="filterType">
+                        <option value="">All Types</option>
+                        <option value="apartment">Apartment</option>
+                        <option value="house">House</option>
+                        <option value="studio">Studio</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="filterPrice">Price Range</label>
+                    <select id="filterPrice">
+                        <option value="">Any Price</option>
+                        <option value="0-300000">Under $300,000</option>
+                        <option value="300000-600000">$300,000 - $600,000</option>
+                        <option value="600000-1000000">$600,000 - $1,000,000</option>
+                        <option value="1000000+">$1,000,000+</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="filterBeds">Min Bedrooms</label>
+                    <select id="filterBeds">
+                        <option value="">Any</option>
+                        <option value="1">1+</option>
+                        <option value="2">2+</option>
+                        <option value="3">3+</option>
+                        <option value="4">4+</option>
+                    </select>
+                </div>
+                
+                <button class="filter-btn" onclick="filterProperties()">Filter</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Count -->
+    <section style="padding: 20px;">
+        <div class="container">
+            <p id="resultsCount" class="results-count">Found 8 properties</p>
+        </div>
+    </section>
+
+    <!-- Properties Grid -->
+    <section class="properties-section">
+        <div class="container">
+            <div id="propertiesGrid" class="properties-grid">
+                <!-- Properties will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>RealEstate Pro</h4>
+                    <p>Your trusted partner in finding the perfect home.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="buy.html">Buy Properties</a></li>
+                        <li><a href="rent.html">Rent Properties</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Buying Guide</a></li>
+                        <li><a href="#">Renting Guide</a></li>
+                        <li><a href="#">Market Analysis</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 RealEstate Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="js/script.js"></script>
+</body>
+</html>
+                        <option value="house">House</option>
+                        <option value="apartment">Apartment</option>
+                        <option value="townhouse">Townhouse</option>
+                        <option value="condo">Condo</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="filterPrice">Price Range</label>
+                    <select id="filterPrice">
+                        <option value="">All Prices</option>
+                        <option value="0-300000">$0 - $300k</option>
+                        <option value="300000-600000">$300k - $600k</option>
+                        <option value="600000-1000000">$600k - $1M</option>
+                        <option value="1000000+">$1M+</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="filterBeds">Bedrooms</label>
+                    <select id="filterBeds">
+                        <option value="">Any</option>
+                        <option value="1">1+</option>
+                        <option value="2">2+</option>
+                        <option value="3">3+</option>
+                        <option value="4">4+</option>
+                    </select>
+                </div>
+                <button class="filter-btn" onclick="filterProperties()">Apply Filters</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Properties Grid -->
+    <section class="properties-section">
+        <div class="container">
+            <div class="properties-grid" id="propertiesGrid">
+                <!-- Properties will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Us</h4>
+                    <p>RealEstate Pro is your trusted partner in finding the perfect property. With years of experience, we connect buyers with their dream homes.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="properties.html">Properties</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Email: info@realestatepro.com</p>
+                    <p>Phone: 1-800-PROPERTY</p>
+                    <p>Address: 123 Real Estate Ave, New York, NY</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 RealEstate Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

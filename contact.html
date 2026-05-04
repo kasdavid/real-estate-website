@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - RealEstate Pro</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">🏠 RealEstate Pro</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="buy.html" class="nav-link">Buy</a>
+                </li>
+                <li class="nav-item">
+                    <a href="rent.html" class="nav-link">Rent</a>
+                </li>
+                <li class="nav-item">
+                    <a href="agent.html" class="nav-link">Agents</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link active">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link">Dashboard</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>We're here to help you find your perfect property</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" style="padding: 60px 20px;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-bottom: 60px;">
+                <!-- Contact Info Cards -->
+                <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center;">
+                    <div style="font-size: 48px; margin-bottom: 15px;">📍</div>
+                    <h3>Address</h3>
+                    <p style="color: #666;">123 Real Estate Avenue<br>New York, NY 10001</p>
+                </div>
+                
+<div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center;">
+                    <div style="font-size: 48px; margin-bottom: 15px;">📞</div>
+                    <h3>Phone</h3>
+                    <p style="color: #666;"><a href="tel:+12125551234" style="color: #0074E4; text-decoration: none;">(212) 555-1234</a></p>
+                </div>
+                
+                <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center;">
+                    <div style="font-size: 48px; margin-bottom: 15px;">💬</div>
+                    <h3>WhatsApp</h3>
+                    <p style="color: #666;"><a href="https://wa.me/0976487202" target="_blank" style="color: #25D366; text-decoration: none; font-weight: 600;">Chat on WhatsApp</a></p>
+                </div>
+                
+                <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center;">
+                    <div style="font-size: 48px; margin-bottom: 15px;">✉️</div>
+                    <h3>Email</h3>
+                    <p style="color: #666;"><a href="mailto:info@realestatenow.com" style="color: #0074E4; text-decoration: none;">info@realestatenow.com</a></p>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div style="max-width: 700px; margin: 0 auto;">
+                <div style="background: white; padding: 40px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    <h2 style="margin-bottom: 30px;">Send us a Message</h2>
+                    <form id="contactForm" style="display: flex; flex-direction: column; gap: 20px;">
+                        <div>
+                            <label style="font-weight: 600; margin-bottom: 8px; display: block;">Full Name</label>
+                            <input type="text" name="name" required style="width: 100%; padding: 12px; border: 1px solid #e1e8ed; border-radius: 5px; font-size: 14px;">
+                        </div>
+                        
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                            <div>
+                                <label style="font-weight: 600; margin-bottom: 8px; display: block;">Email</label>
+                                <input type="email" name="email" required style="width: 100%; padding: 12px; border: 1px solid #e1e8ed; border-radius: 5px; font-size: 14px;">
+                            </div>
+                            <div>
+                                <label style="font-weight: 600; margin-bottom: 8px; display: block;">Phone</label>
+                                <input type="tel" name="phone" style="width: 100%; padding: 12px; border: 1px solid #e1e8ed; border-radius: 5px; font-size: 14px;">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label style="font-weight: 600; margin-bottom: 8px; display: block;">Subject</label>
+                            <input type="text" name="subject" required style="width: 100%; padding: 12px; border: 1px solid #e1e8ed; border-radius: 5px; font-size: 14px;">
+                        </div>
+                        
+                        <div>
+                            <label style="font-weight: 600; margin-bottom: 8px; display: block;">Message</label>
+                            <textarea name="message" rows="6" required style="width: 100%; padding: 12px; border: 1px solid #e1e8ed; border-radius: 5px; font-size: 14px; font-family: inherit;"></textarea>
+                        </div>
+                        
+                        <button type="submit" style="padding: 12px; background-color: #0074E4; color: white; border: none; border-radius: 5px; font-weight: 600; cursor: pointer; transition: all 0.3s ease;">Send Message</button>
+                        
+                        <div id="contactMessage" style="text-align: center; padding: 15px; border-radius: 5px; display: none;"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>RealEstate Pro</h4>
+                    <p>Your trusted partner in finding the perfect home.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="buy.html">Buy Properties</a></li>
+                        <li><a href="rent.html">Rent Properties</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Buying Guide</a></li>
+                        <li><a href="#">Renting Guide</a></li>
+                        <li><a href="#">Market Analysis</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 RealEstate Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="js/script.js"></script>
+</body>
+</html>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                placeholder="John Doe" 
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                placeholder="john@example.com" 
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input 
+                                type="tel" 
+                                id="phone" 
+                                name="phone" 
+                                placeholder="(555) 123-4567"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select Subject</option>
+                                <option value="inquiry">General Inquiry</option>
+                                <option value="viewing">Schedule Viewing</option>
+                                <option value="offer">Make an Offer</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                placeholder="Tell us about your interests..." 
+                                rows="6" 
+                                required
+                            ></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Send Message</button>
+                        <div id="formMessage" class="form-message"></div>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info-wrapper">
+                    <h2>Contact Information</h2>
+                    
+                    <div class="contact-info-card">
+                        <h3>📍 Address</h3>
+                        <p>123 Real Estate Avenue<br>New York, NY 10001<br>United States</p>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <h3>📞 Phone</h3>
+                        <p>Main: 1-800-PROPERTY<br>Sales: (555) 123-4567<br>Support: (555) 123-4568</p>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <h3>📧 Email</h3>
+                        <p>Info: info@realestatepro.com<br>Sales: sales@realestatepro.com<br>Support: support@realestatepro.com</p>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <h3>🕐 Business Hours</h3>
+                        <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM<br>Sunday: Closed</p>
+                    </div>
+
+                    <div class="social-links">
+                        <h3>Follow Us</h3>
+                        <div class="social-icons">
+<a href="https://www.facebook.com/kasbirdrealestate" target="_blank" class="social-icon">Facebook</a>
+                            <a href="#" class="social-icon">Twitter</a>
+                            <a href="#" class="social-icon">Instagram</a>
+                            <a href="#" class="social-icon">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Us</h4>
+                    <p>RealEstate Pro is your trusted partner in finding the perfect property. With years of experience, we connect buyers with their dream homes.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="properties.html">Properties</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Email: info@realestatepro.com</p>
+                    <p>Phone: 1-800-PROPERTY</p>
+                    <p>Address: 123 Real Estate Ave, New York, NY</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 RealEstate Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

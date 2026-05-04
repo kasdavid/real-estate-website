@@ -1,0 +1,118 @@
+[debug] [2026-05-04T01:37:42.333Z] ----------------------------------------------------------------------
+[debug] [2026-05-04T01:37:42.346Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\kasda\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2026-05-04T01:37:42.348Z] CLI Version:   15.16.0
+[debug] [2026-05-04T01:37:42.348Z] Platform:      win32
+[debug] [2026-05-04T01:37:42.349Z] Node Version:  v24.11.1
+[debug] [2026-05-04T01:37:42.350Z] Time:          Mon May 04 2026 03:37:42 GMT+0200 (South Africa Standard Time)
+[debug] [2026-05-04T01:37:42.351Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\kasda\OneDrive\Desktop\Real Estate
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[debug] [2026-05-04T01:44:52.566Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-05-04T01:44:52.567Z] > authorizing via signed-in user (kasd17332@gmail.com)
+[debug] [2026-05-04T01:44:52.569Z] Checked if tokens are valid: true, expires at: 1777861914198
+[debug] [2026-05-04T01:44:52.570Z] Checked if tokens are valid: true, expires at: 1777861914198
+[debug] [2026-05-04T01:44:52.573Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/availableProjects pageSize=100
+[debug] [2026-05-04T01:44:56.956Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/availableProjects 200
+[debug] [2026-05-04T01:44:56.957Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/availableProjects [omitted]
+[debug] [2026-05-04T01:45:01.619Z] Checked if tokens are valid: true, expires at: 1777861914198
+[debug] [2026-05-04T01:45:01.620Z] Checked if tokens are valid: true, expires at: 1777861914198
+[debug] [2026-05-04T01:45:01.620Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1beta1/projects/inner-magpie-480400-i1:addFirebase [none]
+[debug] [2026-05-04T01:45:03.166Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1beta1/projects/inner-magpie-480400-i1:addFirebase 200
+[debug] [2026-05-04T01:45:03.167Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/inner-magpie-480400-i1:addFirebase {"name":"operations/workflows/MDNiYmQyZTUtYjg2OS00YWVmLThmNDYtNWQwNDNlZDlhYjZh"}
+[debug] [2026-05-04T01:45:03.172Z] Checked if tokens are valid: true, expires at: 1777861914198
+[debug] [2026-05-04T01:45:03.173Z] Checked if tokens are valid: true, expires at: 1777861914198
+[debug] [2026-05-04T01:45:03.174Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MDNiYmQyZTUtYjg2OS00YWVmLThmNDYtNWQwNDNlZDlhYjZh [none]
+[debug] [2026-05-04T01:45:09.281Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MDNiYmQyZTUtYjg2OS00YWVmLThmNDYtNWQwNDNlZDlhYjZh 200
+[debug] [2026-05-04T01:45:09.282Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MDNiYmQyZTUtYjg2OS00YWVmLThmNDYtNWQwNDNlZDlhYjZh {"name":"operations/workflows/MDNiYmQyZTUtYjg2OS00YWVmLThmNDYtNWQwNDNlZDlhYjZh"}
+[debug] [2026-05-04T01:45:09.794Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2026-05-04T01:45:09.795Z] Checked if tokens are valid: true, expires at: 1777861914198
+[debug] [2026-05-04T01:45:09.796Z] Checked if tokens are valid: true, expires at: 1777861914198
+[debug] [2026-05-04T01:45:09.796Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MDNiYmQyZTUtYjg2OS00YWVmLThmNDYtNWQwNDNlZDlhYjZh [none]
+[debug] [2026-05-04T01:45:10.347Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MDNiYmQyZTUtYjg2OS00YWVmLThmNDYtNWQwNDNlZDlhYjZh 200
+[debug] [2026-05-04T01:45:10.347Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MDNiYmQyZTUtYjg2OS00YWVmLThmNDYtNWQwNDNlZDlhYjZh {"name":"operations/workflows/MDNiYmQyZTUtYjg2OS00YWVmLThmNDYtNWQwNDNlZDlhYjZh"}
+[debug] [2026-05-04T01:45:11.353Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2026-05-04T01:45:11.354Z] Checked if tokens are valid: true, expires at: 1777861914198
+[debug] [2026-05-04T01:45:11.354Z] Checked if tokens are valid: true, expires at: 1777861914198
+[debug] [2026-05-04T01:45:11.355Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MDNiYmQyZTUtYjg2OS00YWVmLThmNDYtNWQwNDNlZDlhYjZh [none]
+[debug] [2026-05-04T01:45:11.841Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MDNiYmQyZTUtYjg2OS00YWVmLThmNDYtNWQwNDNlZDlhYjZh 200
+[debug] [2026-05-04T01:45:11.842Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MDNiYmQyZTUtYjg2OS00YWVmLThmNDYtNWQwNDNlZDlhYjZh {"name":"operations/workflows/MDNiYmQyZTUtYjg2OS00YWVmLThmNDYtNWQwNDNlZDlhYjZh"}
+[debug] [2026-05-04T01:45:13.847Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2026-05-04T01:45:13.849Z] Checked if tokens are valid: true, expires at: 1777861914198
+[debug] [2026-05-04T01:45:13.849Z] Checked if tokens are valid: true, expires at: 1777861914198
+[debug] [2026-05-04T01:45:13.849Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MDNiYmQyZTUtYjg2OS00YWVmLThmNDYtNWQwNDNlZDlhYjZh [none]
+[debug] [2026-05-04T01:45:14.389Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MDNiYmQyZTUtYjg2OS00YWVmLThmNDYtNWQwNDNlZDlhYjZh 200
+[debug] [2026-05-04T01:45:14.389Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MDNiYmQyZTUtYjg2OS00YWVmLThmNDYtNWQwNDNlZDlhYjZh {"name":"operations/workflows/MDNiYmQyZTUtYjg2OS00YWVmLThmNDYtNWQwNDNlZDlhYjZh","done":true,"response":{"@type":"type.googleapis.com/google.firebase.service.v1beta1.FirebaseProject","projectId":"inner-magpie-480400-i1","projectNumber":"707668381786","displayName":"My First Project","name":"projects/inner-magpie-480400-i1","resources":{"hostingSite":"inner-magpie-480400-i1"}}}
+[info] 
+[info] === Your Firebase project is ready! ===
+[info] 
+[info] Project information:
+[info]    - Project ID: inner-magpie-480400-i1
+[info]    - Project Name: My First Project
+[info] 
+[info] Firebase console is available at
+[info] https://console.firebase.google.com/project/inner-magpie-480400-i1/overview
+[info] 
+=== Dataconnect Setup
+[info] i  dataconnect: ensuring required API firebasedataconnect.googleapis.com is enabled... 
+[debug] [2026-05-04T01:45:14.478Z] Checked if tokens are valid: true, expires at: 1777861914198
+[debug] [2026-05-04T01:45:14.479Z] Checked if tokens are valid: true, expires at: 1777861914198
+[info] i  dataconnect: ensuring required API sqladmin.googleapis.com is enabled... 
+[debug] [2026-05-04T01:45:14.480Z] Checked if tokens are valid: true, expires at: 1777861914198
+[debug] [2026-05-04T01:45:14.480Z] Checked if tokens are valid: true, expires at: 1777861914198
+[debug] [2026-05-04T01:45:14.481Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/inner-magpie-480400-i1/services/firebasedataconnect.googleapis.com [none]
+[debug] [2026-05-04T01:45:14.481Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/inner-magpie-480400-i1/services/firebasedataconnect.googleapis.com  x-goog-user-project=inner-magpie-480400-i1
+[debug] [2026-05-04T01:45:14.485Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/inner-magpie-480400-i1/services/sqladmin.googleapis.com [none]
+[debug] [2026-05-04T01:45:14.485Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/inner-magpie-480400-i1/services/sqladmin.googleapis.com  x-goog-user-project=inner-magpie-480400-i1
+[debug] [2026-05-04T01:45:16.209Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/inner-magpie-480400-i1/services/firebasedataconnect.googleapis.com 200
+[debug] [2026-05-04T01:45:16.210Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/inner-magpie-480400-i1/services/firebasedataconnect.googleapis.com [omitted]
+[warn] !  dataconnect: missing required API firebasedataconnect.googleapis.com. Enabling now... 
+[debug] [2026-05-04T01:45:16.215Z] Checked if tokens are valid: true, expires at: 1777861914198
+[debug] [2026-05-04T01:45:16.215Z] Checked if tokens are valid: true, expires at: 1777861914198
+[debug] [2026-05-04T01:45:16.216Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/inner-magpie-480400-i1/services/firebasedataconnect.googleapis.com:enable [none]
+[debug] [2026-05-04T01:45:16.216Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/inner-magpie-480400-i1/services/firebasedataconnect.googleapis.com:enable  x-goog-user-project=inner-magpie-480400-i1
+[debug] [2026-05-04T01:45:16.229Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/inner-magpie-480400-i1/services/sqladmin.googleapis.com 200
+[debug] [2026-05-04T01:45:16.230Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/inner-magpie-480400-i1/services/sqladmin.googleapis.com [omitted]
+[warn] !  dataconnect: missing required API sqladmin.googleapis.com. Enabling now... 
+[debug] [2026-05-04T01:45:16.233Z] Checked if tokens are valid: true, expires at: 1777861914198
+[debug] [2026-05-04T01:45:16.233Z] Checked if tokens are valid: true, expires at: 1777861914198
+[debug] [2026-05-04T01:45:16.234Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/inner-magpie-480400-i1/services/sqladmin.googleapis.com:enable [none]
+[debug] [2026-05-04T01:45:16.235Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/inner-magpie-480400-i1/services/sqladmin.googleapis.com:enable  x-goog-user-project=inner-magpie-480400-i1
+[debug] [2026-05-04T01:45:17.072Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/inner-magpie-480400-i1/services/firebasedataconnect.googleapis.com:enable 200
+[debug] [2026-05-04T01:45:17.073Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/inner-magpie-480400-i1/services/firebasedataconnect.googleapis.com:enable [omitted]
+[debug] [2026-05-04T01:45:17.552Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/inner-magpie-480400-i1/services/sqladmin.googleapis.com:enable 200
+[debug] [2026-05-04T01:45:17.553Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/inner-magpie-480400-i1/services/sqladmin.googleapis.com:enable [omitted]
+[debug] [2026-05-04T01:45:27.671Z] Checked if tokens are valid: true, expires at: 1777861914198
+[debug] [2026-05-04T01:45:27.671Z] Checked if tokens are valid: true, expires at: 1777861914198
+[debug] [2026-05-04T01:45:27.672Z] >>> [apiv2][query] GET https://firebasedataconnect.googleapis.com/v1/projects/inner-magpie-480400-i1/locations/-/services [none]
+[debug] [2026-05-04T01:45:32.238Z] <<< [apiv2][status] GET https://firebasedataconnect.googleapis.com/v1/projects/inner-magpie-480400-i1/locations/-/services 200
+[debug] [2026-05-04T01:45:32.239Z] <<< [apiv2][body] GET https://firebasedataconnect.googleapis.com/v1/projects/inner-magpie-480400-i1/locations/-/services {}
+[info] i  : ensuring required API cloudaicompanion.googleapis.com is enabled... 
+[debug] [2026-05-04T01:45:41.426Z] Checked if tokens are valid: true, expires at: 1777861914198
+[debug] [2026-05-04T01:45:41.426Z] Checked if tokens are valid: true, expires at: 1777861914198
+[debug] [2026-05-04T01:45:41.427Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/inner-magpie-480400-i1/services/cloudaicompanion.googleapis.com [none]
+[debug] [2026-05-04T01:45:41.427Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/inner-magpie-480400-i1/services/cloudaicompanion.googleapis.com  x-goog-user-project=inner-magpie-480400-i1
+[debug] [2026-05-04T01:45:42.904Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/inner-magpie-480400-i1/services/cloudaicompanion.googleapis.com 200
+[debug] [2026-05-04T01:45:42.905Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/inner-magpie-480400-i1/services/cloudaicompanion.googleapis.com [omitted]
+[warn] !  : missing required API cloudaicompanion.googleapis.com. Enabling now... 
+[debug] [2026-05-04T01:45:42.907Z] Checked if tokens are valid: true, expires at: 1777861914198
+[debug] [2026-05-04T01:45:42.908Z] Checked if tokens are valid: true, expires at: 1777861914198
+[debug] [2026-05-04T01:45:42.909Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/inner-magpie-480400-i1/services/cloudaicompanion.googleapis.com:enable [none]
+[debug] [2026-05-04T01:45:42.909Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/inner-magpie-480400-i1/services/cloudaicompanion.googleapis.com:enable  x-goog-user-project=inner-magpie-480400-i1
+[debug] [2026-05-04T01:45:44.234Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/inner-magpie-480400-i1/services/cloudaicompanion.googleapis.com:enable 200
+[debug] [2026-05-04T01:45:44.235Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/inner-magpie-480400-i1/services/cloudaicompanion.googleapis.com:enable [omitted]

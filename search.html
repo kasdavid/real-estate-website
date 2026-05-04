@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Search - RealEstate Pro</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">🏠 RealEstate Pro</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link active">Browse</a>
+                    <div class="dropdown-menu">
+                        <a href="buy.html">Buy Properties</a>
+                        <a href="rent.html">Rent Properties</a>
+                        <a href="search.html">Advanced Search</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="agent.html" class="nav-link">Agents</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item" id="userMenu">
+                    <a href="login.html" class="nav-link">Login</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Advanced Search</h1>
+            <p>Find properties with detailed filters</p>
+        </div>
+    </section>
+
+    <!-- Advanced Search Form -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-form-wrapper">
+                <form class="advanced-search-form" id="advancedSearchForm">
+                    <div class="search-row">
+                        <div class="search-col">
+                            <label>Search Type</label>
+                            <div class="search-type-toggle">
+                                <button type="button" class="toggle-btn active" data-type="buy">Buy</button>
+                                <button type="button" class="toggle-btn" data-type="rent">Rent</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="search-row">
+                        <div class="search-col">
+                            <label for="searchLocation">Location</label>
+                            <input type="text" id="searchLocation" placeholder="City, Neighborhood, or Address">
+                        </div>
+                        <div class="search-col">
+                            <label for="searchKeyword">Keywords</label>
+                            <input type="text" id="searchKeyword" placeholder="e.g., pool, garden, modern">
+                        </div>
+                    </div>
+
+                    <div class="search-row">
+                        <div class="search-col">
+                            <label for="searchMinPrice">Min Price</label>
+                            <input type="number" id="searchMinPrice" placeholder="0">
+                        </div>
+                        <div class="search-col">
+                            <label for="searchMaxPrice">Max Price</label>
+                            <input type="number" id="searchMaxPrice" placeholder="999999999">
+                        </div>
+                    </div>
+
+                    <div class="search-row">
+                        <div class="search-col">
+                            <label for="searchBeds">Bedrooms</label>
+                            <input type="number" id="searchBeds" placeholder="Any" min="0">
+                        </div>
+                        <div class="search-col">
+                            <label for="searchBaths">Bathrooms</label>
+                            <input type="number" id="searchBaths" placeholder="Any" min="0" step="0.5">
+                        </div>
+                        <div class="search-col">
+                            <label for="searchType">Property Type</label>
+                            <select id="searchType">
+                                <option value="">All Types</option>
+                                <option value="house">House</option>
+                                <option value="apartment">Apartment</option>
+                                <option value="townhouse">Townhouse</option>
+                                <option value="condo">Condo</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="search-row">
+                        <div class="search-col">
+                            <label for="searchMinSqft">Min Sq Ft</label>
+                            <input type="number" id="searchMinSqft" placeholder="0">
+                        </div>
+                        <div class="search-col">
+                            <label for="searchMaxSqft">Max Sq Ft</label>
+                            <input type="number" id="searchMaxSqft" placeholder="999999">
+                        </div>
+                    </div>
+
+                    <div class="search-actions">
+                        <button type="submit" class="search-btn-primary">Search Properties</button>
+                        <button type="reset" class="search-btn-secondary">Clear All</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results -->
+    <section class="properties-section">
+        <div class="container">
+            <div id="searchResults"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Us</h4>
+                    <p>RealEstate Pro is your trusted partner in finding the perfect property.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="buy.html">Buy</a></li>
+                        <li><a href="rent.html">Rent</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Email: info@realestatepro.com</p>
+                    <p>Phone: 1-800-PROPERTY</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 RealEstate Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

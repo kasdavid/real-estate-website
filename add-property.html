@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Property - RealEstate Pro</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        // Protect this page - redirect if not logged in
+        if (!localStorage.getItem('realestate_user') && !sessionStorage.getItem('realestate_user')) {
+            window.location.href = 'login.html?redirect=add-property.html';
+        }
+    </script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">🏠 RealEstate Pro</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Browse</a>
+                    <div class="dropdown-menu">
+                        <a href="buy.html">Buy Properties</a>
+                        <a href="rent.html">Rent Properties</a>
+                        <a href="search.html">Advanced Search</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link">Dashboard</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Add New Property</h1>
+            <p>List your property on RealEstate Pro</p>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="form-section">
+        <div class="container">
+            <div class="form-wrapper">
+                <form id="addPropertyForm" class="property-form">
+                    <!-- Basic Information -->
+                    <fieldset class="form-section-group">
+                        <legend>Basic Information</legend>
+
+                        <div class="form-row">
+                            <div class="form-col">
+                                <label for="propTitle">Property Title</label>
+                                <input type="text" id="propTitle" name="title" placeholder="e.g., Modern Penthouse with City Views" required>
+                            </div>
+                            <div class="form-col">
+                                <label for="propType">Property Type</label>
+                                <select id="propType" name="type" required>
+                                    <option value="">Select Type</option>
+                                    <option value="house">House</option>
+                                    <option value="apartment">Apartment</option>
+                                    <option value="townhouse">Townhouse</option>
+                                    <option value="condo">Condo</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-col">
+                                <label for="propLocation">Address</label>
+                                <input type="text" id="propLocation" name="location" placeholder="Full Address" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-col">
+                                <label for="propDescription">Description</label>
+                                <textarea id="propDescription" name="description" rows="5" placeholder="Describe your property..." required></textarea>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Details -->
+                    <fieldset class="form-section-group">
+                        <legend>Property Details</legend>
+
+                        <div class="form-row">
+                            <div class="form-col">
+                                <label for="propBeds">Bedrooms</label>
+                                <input type="number" id="propBeds" name="bedrooms" min="0" required>
+                            </div>
+                            <div class="form-col">
+                                <label for="propBaths">Bathrooms</label>
+                                <input type="number" id="propBaths" name="bathrooms" min="0" step="0.5" required>
+                            </div>
+                            <div class="form-col">
+                                <label for="propSqft">Square Feet</label>
+                                <input type="number" id="propSqft" name="sqft" min="0" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-col">
+                                <label for="propYear">Year Built</label>
+                                <input type="number" id="propYear" name="yearBuilt" min="1800" max="2100" required>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Pricing -->
+                    <fieldset class="form-section-group">
+                        <legend>Pricing</legend>
+
+                        <div class="form-row">
+                            <div class="form-col">
+                                <label for="propPrice">Price</label>
+                                <input type="number" id="propPrice" name="price" min="0" placeholder="0" required>
+                            </div>
+                            <div class="form-col">
+                                <label for="propPriceType">Price Type</label>
+                                <select id="propPriceType" name="priceType" required>
+                                    <option value="sale">For Sale</option>
+                                    <option value="rent">For Rent</option>
+                                </select>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Amenities -->
+                    <fieldset class="form-section-group">
+                        <legend>Amenities</legend>
+                        <div class="amenities-checklist">
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="amenity" value="Pool"> Pool
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="amenity" value="Gym"> Gym
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="amenity" value="Parking"> Parking
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="amenity" value="Garden"> Garden
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="amenity" value="Balcony"> Balcony
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="amenity" value="Modern Kitchen"> Modern Kitchen
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="amenity" value="Fireplace"> Fireplace
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="amenity" value="Hardwood Floors"> Hardwood Floors
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <!-- Images -->
+                    <fieldset class="form-section-group">
+                        <legend>Images (with Preview)</legend>
+                        <div class="form-row">
+                            <div class="form-col">
+                                <label for="propImage1">Image 1 (Main Photo)</label>
+                                <input type="file" id="propImage1" name="image1" accept="image/*">
+                                <img id="previewImage1" class="file-preview" style="width: 100px; height: 75px; object-fit: cover; display: none; margin-top: 5px; border: 1px solid #ddd; border-radius: 4px;">
+                            </div>
+                            <div class="form-col">
+                                <label for="propImage2">Image 2</label>
+                                <input type="file" id="propImage2" name="image2" accept="image/*">
+                                <img id="previewImage2" class="file-preview" style="width: 100px; height: 75px; object-fit: cover; display: none; margin-top: 5px; border: 1px solid #ddd; border-radius: 4px;">
+                            </div>
+                            <div class="form-col">
+                                <label for="propImage3">Image 3</label>
+                                <input type="file" id="propImage3" name="image3" accept="image/*">
+                                <img id="previewImage3" class="file-preview" style="width: 100px; height: 75px; object-fit: cover; display: none; margin-top: 5px; border: 1px solid #ddd; border-radius: 4px;">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-col">
+                                <label for="propImage4">Image 4</label>
+                                <input type="file" id="propImage4" name="image4" accept="image/*">
+                                <img id="previewImage4" class="file-preview" style="width: 100px; height: 75px; object-fit: cover; display: none; margin-top: 5px; border: 1px solid #ddd; border-radius: 4px;">
+                            </div>
+                            <div class="form-col">
+                                <label for="propImage5">Image 5</label>
+                                <input type="file" id="propImage5" name="image5" accept="image/*">
+                                <img id="previewImage5" class="file-preview" style="width: 100px; height: 75px; object-fit: cover; display: none; margin-top: 5px; border: 1px solid #ddd; border-radius: 4px;">
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Videos -->
+                    <fieldset class="form-section-group">
+                        <legend>Property Videos</legend>
+                        <div class="form-row">
+                            <div class="form-col">
+                                <label for="propVideo1">Video 1</label>
+                                <input type="file" id="propVideo1" name="video1" accept="video/*">
+                                <video id="previewVideo1" class="file-preview" controls style="width: 100px; height: 75px; display: none; margin-top: 5px; border: 1px solid #ddd; border-radius: 4px;"></video>
+                            </div>
+                            <div class="form-col">
+                                <label for="propVideo2">Video 2</label>
+                                <input type="file" id="propVideo2" name="video2" accept="video/*">
+                                <video id="previewVideo2" class="file-preview" controls style="width: 100px; height: 75px; display: none; margin-top: 5px; border: 1px solid #ddd; border-radius: 4px;"></video>
+                            </div>
+                            <div class="form-col">
+                                <label for="propVideo3">Video 3</label>
+                                <input type="file" id="propVideo3" name="video3" accept="video/*">
+                                <video id="previewVideo3" class="file-preview" controls style="width: 100px; height: 75px; display: none; margin-top: 5px; border: 1px solid #ddd; border-radius: 4px;"></video>
+                            </div>
+                        </div>
+                        <p class="help-text">Max 5MB per file. Images: JPG, PNG. Videos: MP4 (thumbnails only)</p>
+                    </fieldset>
+
+                    <!-- Buttons -->
+                    <div class="form-actions">
+                        <button type="submit" class="btn-submit">List Property</button>
+                        <button type="button" class="btn-cancel">Clear Form</button>
+                    </div>
+
+                    <div id="formMessage" class="form-message"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Us</h4>
+                    <p>RealEstate Pro is your trusted partner in finding the perfect property.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="buy.html">Buy</a></li>
+                        <li><a href="rent.html">Rent</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Email: info@realestatepro.com</p>
+                    <p>Phone: 1-800-PROPERTY</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 RealEstate Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+<script type="module" src="js/firebase.js"></script>
+    <script type="module" src="js/auth.js"></script>
+    <script type="module" src="js/property.js"></script>
+    <script src="js/gps.js"></script>
+</body>
+</html>

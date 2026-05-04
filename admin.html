@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Panel - Kas Bird Real Estate</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+<a href="index.html">🏠 Kas Bird Real Estate</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item" id="adminMenu">
+                    <a href="admin.html" class="nav-link active">Admin Panel</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" onclick="logoutAdmin()" class="nav-link">Logout</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Admin Dashboard -->
+    <section class="admin-section">
+        <div class="container">
+            <div class="admin-wrapper">
+                <!-- Sidebar -->
+                <aside class="admin-sidebar">
+                    <nav class="admin-nav">
+                        <a href="#overview" class="admin-nav-item active" onclick="showAdminTab('overview')">
+                            <span class="icon">📊</span> Dashboard
+                        </a>
+                        <a href="#users" class="admin-nav-item" onclick="showAdminTab('users')">
+                            <span class="icon">👥</span> Users
+                        </a>
+                        <a href="#properties" class="admin-nav-item" onclick="showAdminTab('properties')">
+                            <span class="icon">🏠</span> Properties
+                        </a>
+                        <a href="#agents" class="admin-nav-item" onclick="showAdminTab('agents')">
+                            <span class="icon">👔</span> Agents
+                        </a>
+                        <a href="#reports" class="admin-nav-item" onclick="showAdminTab('reports')">
+                            <span class="icon">📈</span> Reports
+                        </a>
+                        <a href="#settings" class="admin-nav-item" onclick="showAdminTab('settings')">
+                            <span class="icon">⚙️</span> Settings
+                        </a>
+                    </nav>
+                </aside>
+
+                <!-- Main Content -->
+                <main class="admin-content">
+                    <!-- Overview Tab -->
+                    <div id="overview" class="admin-tab active">
+                        <h1>Admin Dashboard</h1>
+                        <div class="admin-stats">
+                            <div class="stat-box">
+                                <div class="stat-number">1,234,567</div>
+                                <div class="stat-label">Total Users</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-number">567,890</div>
+                                <div class="stat-label">Properties Listed</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-number">45,678</div>
+                                <div class="stat-label">Agents</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-number">$2.3B</div>
+                                <div class="stat-label">Total Value</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Users Tab -->
+                    <div id="users" class="admin-tab">
+                        <h2>Manage Users</h2>
+                        <div class="admin-table-wrapper">
+                            <table class="admin-table">
+                                <thead>
+                                    <tr>
+                                        <th>User ID</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Role</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="usersTable">
+                                    <tr>
+                                        <td>#001</td>
+                                        <td>John Doe</td>
+                                        <td>john@example.com</td>
+                                        <td>Buyer</td>
+                                        <td><span class="status active">Active</span></td>
+                                        <td><button class="action-btn">Edit</button><button class="action-btn delete">Delete</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Properties Tab -->
+                    <div id="properties" class="admin-tab">
+                        <h2>Manage Properties</h2>
+                        <div class="admin-table-wrapper">
+                            <table class="admin-table">
+                                <thead>
+                                    <tr>
+                                        <th>Property ID</th>
+                                        <th>Title</th>
+                                        <th>Location</th>
+                                        <th>Price</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="propertiesTable">
+                                    <tr>
+                                        <td>#P001</td>
+                                        <td>Modern Penthouse</td>
+                                        <td>Manhattan, NY</td>
+                                        <td>$2,500,000</td>
+                                        <td><span class="status active">Listed</span></td>
+                                        <td><button class="action-btn">Edit</button><button class="action-btn delete">Remove</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Agents Tab -->
+                    <div id="agents" class="admin-tab">
+                        <h2>Manage Agents</h2>
+                        <div class="admin-table-wrapper">
+                            <table class="admin-table">
+                                <thead>
+                                    <tr>
+                                        <th>Agent ID</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Phone</th>
+                                        <th>Properties</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="agentsTable">
+                                    <tr>
+                                        <td>#A001</td>
+                                        <td>Jane Smith</td>
+                                        <td>jane@agents.com</td>
+                                        <td>(555) 123-4567</td>
+                                        <td>45</td>
+                                        <td><button class="action-btn">Edit</button><button class="action-btn delete">Suspend</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Reports Tab -->
+                    <div id="reports" class="admin-tab">
+                        <h2>Reports & Analytics</h2>
+                        <div class="reports-grid">
+                            <div class="report-card">
+                                <h3>Monthly Revenue</h3>
+                                <p class="report-value">$456,789</p>
+                                <p class="report-change">↑ 12% from last month</p>
+                            </div>
+                            <div class="report-card">
+                                <h3>New Listings</h3>
+                                <p class="report-value">2,345</p>
+                                <p class="report-change">↑ 8% from last month</p>
+                            </div>
+                            <div class="report-card">
+                                <h3>New Users</h3>
+                                <p class="report-value">12,567</p>
+                                <p class="report-change">↓ 5% from last month</p>
+                            </div>
+                            <div class="report-card">
+                                <h3>Transactions</h3>
+                                <p class="report-value">1,234</p>
+                                <p class="report-change">↑ 15% from last month</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Settings Tab -->
+                    <div id="settings" class="admin-tab">
+                        <h2>System Settings</h2>
+                        <form class="admin-settings">
+                            <div class="settings-group">
+                                <label for="siteName">Site Name</label>
+                                <input type="text" id="siteName" value="RealEstate Pro">
+                            </div>
+                            <div class="settings-group">
+                                <label for="contactEmail">Contact Email</label>
+                                <input type="email" id="contactEmail" value="info@realestatepro.com">
+                            </div>
+                            <div class="settings-group">
+                                <label for="maintenanceMode">Maintenance Mode</label>
+                                <input type="checkbox" id="maintenanceMode">
+                            </div>
+                            <button type="submit" class="btn-submit">Save Settings</button>
+                        </form>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 RealEstate Pro Admin Panel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

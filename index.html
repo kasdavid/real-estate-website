@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kas Bird Real Estate - Find Your Dream Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar" style="background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+        <div class="nav-container">
+            <div class="nav-logo">
+<a href="index.html" style="color: #0A1F44; font-size: 24px; font-weight: 700;">🏠 Kas Bird Real Estate</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="buy.html" class="nav-link">Buy</a>
+                </li>
+                <li class="nav-item">
+                    <a href="rent.html" class="nav-link">Rent</a>
+                </li>
+                <li class="nav-item">
+                    <a href="map.html" class="nav-link">📍 Map</a>
+                </li>
+                <li class="nav-item">
+                    <a href="agent.html" class="nav-link">Agents</a>
+                </li>
+                <li class="nav-item">
+                    <a href="search.html" class="nav-link">Search</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+<a href="add-property.html" class="nav-link" style="background: #0A1F44; color: white; padding: 10px 20px; border-radius: 5px;">Add Property</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Background Image -->
+    <section class="hero" style="background: linear-gradient(rgba(26, 40, 68, 0.7), rgba(26, 40, 68, 0.7)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&h=600&fit=crop'); background-size: cover; background-position: center; padding: 120px 20px;">
+        <div class="hero-content">
+            <h1 style="color: white; font-size: 48px; margin-bottom: 15px;">Find Your Dream Home</h1>
+<p style="color: rgba(255,255,255,0.9); font-size: 18px; margin-bottom: 40px;">Discover the perfect place to live with Kas Bird Real Estate</p>
+            
+            <!-- Search Bar -->
+            <div class="search-container" style="max-width: 900px; margin: 0 auto;">
+                <form class="search-form" id="searchForm" style="background: white; padding: 20px; border-radius: 10px; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px;">
+                    <div class="search-input-group">
+                        <input 
+                            type="text" 
+                            placeholder="Enter Location" 
+                            class="search-input"
+                            id="locationInput"
+                        >
+                    </div>
+                    <div class="search-input-group">
+                        <select class="search-input" id="propertyType">
+                            <option value="">Property Type</option>
+                            <option value="house">House</option>
+                            <option value="apartment">Apartment</option>
+                            <option value="studio">Studio</option>
+                        </select>
+                    </div>
+                    <div class="search-input-group">
+                        <select class="search-input" id="priceRange">
+                            <option value="">Price Range</option>
+                            <option value="0-300000">k0 - k300</option>
+                            <option value="300000-600000">k300 - k600</option>
+                            <option value="600000-1000000">k600 - 1M</option>
+                            <option value="1000000+">1M+</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="search-btn">Search</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Properties Section -->
+    <section class="featured-section">
+        <div class="container">
+            <h2>Featured Properties</h2>
+            <p class="section-subtitle">Explore our handpicked selection of premium properties</p>
+            
+            <div class="properties-grid" id="featuredProperties">
+                <!-- Properties will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>5,000+</h3>
+                    <p>Properties Listed</p>
+                </div>
+                <div class="stat-card">
+                    <h3>10,000+</h3>
+                    <p>Happy Customers</p>
+                </div>
+                <div class="stat-card">
+                    <h3>50+</h3>
+                    <p>Cities Covered</p>
+                </div>
+                <div class="stat-card">
+                    <h3>24/7</h3>
+                    <p>Customer Support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to find your perfect home?</h2>
+            <p>Browse our complete listings or contact our team for personalized assistance</p>
+            <div class="cta-buttons">
+                <a href="buy.html" class="cta-btn primary">Browse All Properties</a>
+                <a href="contact.html" class="cta-btn secondary">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Kas Bird Real Estate</h4>
+                    <p>Your trusted partner in finding the perfect home. We connect buyers with their dream properties.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="buy.html">Buy Properties</a></li>
+                        <li><a href="rent.html">Rent Properties</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Buying Guide</a></li>
+                        <li><a href="#">Renting Guide</a></li>
+                        <li><a href="#">Market Analysis</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📧 info@kasbirdrealestate.com</p>
+                    <p>📞 +260 976487202</p>
+                    <p>📍 Lusaka, Zambia</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kas Bird Real Estate. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+<script type="module" src="js/firebase.js"></script>
+    <script type="module" src="js/auth.js"></script>  
+    <script type="module" src="js/script.js"></script>

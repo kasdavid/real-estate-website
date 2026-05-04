@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buy Properties - Kas Bird Real Estate</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<!-- Top Bar -->
+    <div style="background: #0A1F44; color: white; padding: 10px 20px; font-size: 14px;">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="display: flex; gap: 30px;">
+                <span>📍 Lusaka, Zambia</span>
+                <span>📞 +260 123 456 789</span>
+                <span>📧 info@kasrealestate.com</span>
+            </div>
+            <div style="display: flex; gap: 15px;">
+                <a href="login.html" style="color: white; text-decoration: none;">Login / Register</a>
+                <span>|</span>
+                <a href="#" style="color: white; text-decoration: none;">EN</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar" style="background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+        <div class="nav-container">
+            <div class="nav-logo">
+<a href="index.html" style="color: #0A1F44; font-size: 24px; font-weight: 700;">🏠 Kas Bird Real Estate</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+<a href="buy.html" class="nav-link" style="color: #0A1F44; font-weight: 600;">Buy</a>
+                </li>
+                <li class="nav-item">
+                    <a href="rent.html" class="nav-link">Rent</a>
+                </li>
+                <li class="nav-item">
+                    <a href="agent.html" class="nav-link">Agents</a>
+                </li>
+                <li class="nav-item">
+                    <a href="search.html" class="nav-link">Search</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+<a href="add-property.html" class="nav-link" style="background: #0A1F44; color: white; padding: 10px 20px; border-radius: 5px;">Add Property</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+<section class="page-header" style="background: linear-gradient(135deg, #0A1F44 0%, #0F2544 100%); color: white; padding: 60px 20px; text-align: center;">
+        <div class="container">
+            <h1>Properties for Sale</h1>
+            <p>Browse our collection of premium properties available for purchase</p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section style="padding: 40px 20px; background-color: #f5f5f5;">
+        <div class="container">
+            <h3 style="margin-bottom: 20px;">Refine Your Search</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px;">
+                <div>
+                    <label style="font-weight: 600; display: block; margin-bottom: 8px;">Property Type</label>
+                    <select id="filterType" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+                        <option value="">All Types</option>
+                        <option value="apartment">Apartment</option>
+                        <option value="house">House</option>
+                        <option value="studio">Studio</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label style="font-weight: 600; display: block; margin-bottom: 8px;">Price Range</label>
+                    <select id="filterPrice" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+                        <option value="">Any Price</option>
+                        <option value="0-300000">Under $300k</option>
+                        <option value="300000-600000">$300k - $600k</option>
+                        <option value="600000-1000000">$600k - $1M</option>
+                        <option value="1000000+">$1M+</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label style="font-weight: 600; display: block; margin-bottom: 8px;">Min Bedrooms</label>
+                    <select id="filterBeds" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+                        <option value="">Any</option>
+                        <option value="1">1+</option>
+                        <option value="2">2+</option>
+                        <option value="3">3+</option>
+                        <option value="4">4+</option>
+                    </select>
+                </div>
+                
+                <div style="display: flex; align-items: flex-end;">
+<button onclick="filterProperties()" style="width: 100%; padding: 10px 20px; background: #0A1F44; color: white; border: none; border-radius: 5px; font-weight: 600; cursor: pointer;">Filter</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Count -->
+    <section style="padding: 20px;">
+        <div class="container">
+            <p id="resultsCount" style="color: #666; font-size: 14px;">Found 8 properties</p>
+        </div>
+    </section>
+
+    <!-- Properties Grid -->
+    <section class="properties-section" style="padding: 40px 20px;">
+        <div class="container">
+            <div id="propertiesGrid" class="properties-grid">
+                <!-- Properties loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+<h4>Kas Bird Real Estate</h4>
+                    <p>Your trusted partner in finding the perfect home.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="buy.html">Buy</a></li>
+                        <li><a href="rent.html">Rent</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📧 info@kasrealestate.com</p>
+                    <p>📞 +260 123 456 789</p>
+                    <p>📍 Lusaka, Zambia</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+<p>&copy; 2026 Kas Bird Real Estate. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="js/script.js"></script>
+</body>
+</html>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">🏠 RealEstate Pro</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link active">Browse</a>
+                    <div class="dropdown-menu">
+                        <a href="buy.html">Buy Properties</a>
+                        <a href="rent.html">Rent Properties</a>
+                        <a href="search.html">Advanced Search</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="agent.html" class="nav-link">Agents</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item" id="userMenu">
+                    <a href="login.html" class="nav-link">Login</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Properties for Sale</h1>
+            <p>Find the perfect property to buy</p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="filterBudget">Budget</label>
+                    <select id="filterBudget">
+                        <option value="">Any Price</option>
+                        <option value="0-300000">Up to $300k</option>
+                        <option value="300000-600000">$300k - $600k</option>
+                        <option value="600000-1000000">$600k - $1M</option>
+                        <option value="1000000+">$1M+</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="filterBeds">Bedrooms</label>
+                    <select id="filterBeds">
+                        <option value="">Any</option>
+                        <option value="1">1+</option>
+                        <option value="2">2+</option>
+                        <option value="3">3+</option>
+                        <option value="4">4+</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="filterType">Property Type</label>
+                    <select id="filterType">
+                        <option value="">All Types</option>
+                        <option value="house">House</option>
+                        <option value="apartment">Apartment</option>
+                        <option value="townhouse">Townhouse</option>
+                        <option value="condo">Condo</option>
+                    </select>
+                </div>
+                <button class="filter-btn" onclick="filterProperties()">Apply Filters</button>
+                <button class="filter-btn" onclick="location.reload()">Reset</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Properties Grid -->
+    <section class="properties-section">
+        <div class="container">
+            <div id="resultsCount" class="results-count"></div>
+            <div class="properties-grid" id="buyPropertiesGrid">
+                <!-- Properties will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Us</h4>
+                    <p>RealEstate Pro is your trusted partner in finding the perfect property.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="buy.html">Buy</a></li>
+                        <li><a href="rent.html">Rent</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Email: info@realestatepro.com</p>
+                    <p>Phone: 1-800-PROPERTY</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 RealEstate Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

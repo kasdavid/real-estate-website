@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Details - RealEstate Pro</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">🏠 RealEstate Pro</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="buy.html" class="nav-link">Buy</a>
+                </li>
+                <li class="nav-item">
+                    <a href="rent.html" class="nav-link">Rent</a>
+                </li>
+                <li class="nav-item">
+                    <a href="agent.html" class="nav-link">Agents</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Property Details -->
+    <div id="propertyDetailContainer" style="padding: 40px 20px;">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <div id="breadcrumb" style="margin-bottom: 20px; font-size: 14px; color: #666;"></div>
+
+            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 40px;">
+                <!-- Main Content -->
+                <div>
+                    <!-- Image Gallery -->
+                    <div style="margin-bottom: 30px;">
+                        <img id="propertyImage" src="" alt="Property Image" style="width: 100%; height: 400px; object-fit: cover; border-radius: 10px; margin-bottom: 15px;">
+                        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;" id="imageThumbnails">
+                            <!-- Thumbnails will be generated here -->
+                        </div>
+                    </div>
+
+                    <!-- Property Information -->
+                    <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 30px;">
+                        <h1 id="detailTitle" style="margin-bottom: 10px;"></h1>
+                        <p id="detailLocation" style="color: #0074E4; font-size: 16px; margin-bottom: 15px;"></p>
+                        <p id="detailPrice" style="font-size: 32px; font-weight: 700; color: #0074E4; margin-bottom: 20px;"></p>
+
+                        <div style="padding: 20px; background: #f8f9fa; border-radius: 10px; margin-bottom: 20px;">
+                            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; text-align: center;">
+                                <div>
+                                    <div style="font-size: 24px; font-weight: 700; color: #0074E4;">
+                                        <span id="detailBeds">0</span>
+                                    </div>
+                                    <div style="color: #666; font-size: 14px;">Bedrooms</div>
+                                </div>
+                                <div>
+                                    <div style="font-size: 24px; font-weight: 700; color: #0074E4;">
+                                        <span id="detailBaths">0</span>
+                                    </div>
+                                    <div style="color: #666; font-size: 14px;">Bathrooms</div>
+                                </div>
+                                <div>
+                                    <div style="font-size: 24px; font-weight: 700; color: #0074E4;">
+                                        <span id="detailSqft">0</span>
+                                    </div>
+                                    <div style="color: #666; font-size: 14px;">Sq Ft</div>
+                                </div>
+                                <div>
+                                    <div style="font-size: 24px; font-weight: 700; color: #0074E4;">
+                                        <span id="detailYear">0</span>
+                                    </div>
+                                    <div style="color: #666; font-size: 14px;">Year Built</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Description -->
+                        <div style="margin-bottom: 20px;">
+                            <h3 style="margin-bottom: 15px;">Description</h3>
+                            <p id="detailDescription" style="line-height: 1.8; color: #666;"></p>
+                        </div>
+
+                        <!-- Amenities -->
+                        <div style="margin-bottom: 20px;">
+                            <h3 style="margin-bottom: 15px;">Amenities</h3>
+                            <div id="detailAmenities" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div>
+                    <!-- Agent Info -->
+                    <div style="background: linear-gradient(135deg, #0074E4 0%, #0056b3 100%); color: white; padding: 30px; border-radius: 10px; margin-bottom: 30px;">
+                        <h3 style="margin-bottom: 15px; border-bottom: 2px solid rgba(255,255,255,0.2); padding-bottom: 15px;">Listed by</h3>
+                        <div id="agentInfo"></div>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); display: flex; flex-direction: column; gap: 10px;">
+                        <button style="padding: 12px; background-color: #0074E4; color: white; border: none; border-radius: 5px; font-weight: 600; cursor: pointer; transition: all 0.3s ease;">Schedule Tour</button>
+                        <button style="padding: 12px; background-color: #FF6B35; color: white; border: none; border-radius: 5px; font-weight: 600; cursor: pointer; transition: all 0.3s ease;">Get Pre-Approved</button>
+                        <button style="padding: 12px; background: white; border: 2px solid #0074E4; color: #0074E4; border-radius: 5px; font-weight: 600; cursor: pointer; transition: all 0.3s ease;" class="favorite-btn">♡ Save Property</button>
+                    </div>
+
+                    <!-- Share -->
+                    <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-top: 20px;">
+                        <h4 style="margin-bottom: 15px;">Share</h4>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 10px;">
+                            <button style="padding: 10px; border: 1px solid #e1e8ed; background: white; border-radius: 5px; cursor: pointer; font-size: 18px;">📘</button>
+                            <button style="padding: 10px; border: 1px solid #e1e8ed; background: white; border-radius: 5px; cursor: pointer; font-size: 18px;">𝕏</button>
+                            <button style="padding: 10px; border: 1px solid #e1e8ed; background: white; border-radius: 5px; cursor: pointer; font-size: 18px;">💬</button>
+                            <button style="padding: 10px; border: 1px solid #e1e8ed; background: white; border-radius: 5px; cursor: pointer; font-size: 18px;">✉️</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Similar Properties -->
+            <div style="margin-top: 60px;">
+                <h2 style="margin-bottom: 30px;">Similar Properties</h2>
+                <div id="similarPropertiesGrid" class="properties-grid"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>RealEstate Pro</h4>
+                    <p>Your trusted partner in finding the perfect home.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="buy.html">Buy Properties</a></li>
+                        <li><a href="rent.html">Rent Properties</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Buying Guide</a></li>
+                        <li><a href="#">Renting Guide</a></li>
+                        <li><a href="#">Market Analysis</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 RealEstate Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Load property details when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            loadPropertyDetail();
+            
+            // Setup favorite button
+            const favBtn = document.querySelector('.favorite-btn');
+            if (favBtn) {
+                const urlParams = new URLSearchParams(window.location.search);
+                const propertyId = parseInt(urlParams.get('id'));
+                
+                if (isFavorite(propertyId)) {
+                    favBtn.textContent = '♥ Remove from Favorites';
+                    favBtn.classList.add('active');
+                }
+                
+                favBtn.addEventListener('click', function() {
+                    togglePropertyFavorite(propertyId, this);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
